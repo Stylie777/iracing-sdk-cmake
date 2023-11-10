@@ -12,7 +12,7 @@
 #pragma warning(disable:4996) //_CRT_SECURE_NO_WARNINGS
 
 
-#include <Windows.h>
+#include <windows.h>
 #include <stdio.h>
 #include <conio.h>
 #include <signal.h>
