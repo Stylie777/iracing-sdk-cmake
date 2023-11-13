@@ -65,13 +65,33 @@ The header file, `windows.h` will need to be included as `#include <windows.h>` 
 
 # Using this project
 
-This project can be included using two differnet methods
+This project can be included using two differnet methods:
 
 ## CMake FetchContent
 
-CMake FetchContent 
+**COMING SOON**
 
 ## Git Submodule
+
+1. Add the submodule to your repo
+```git
+git submodule add https://github.com/Stylie777/iracing-sdk-cmake.git
+```
+2. Commit this to your repository
+```git
+git add .gitmodules iracing-sdk-cmake
+git commit
+```
+
+The subdirectory then needs to be included in your top level CMakeLists.txt file for your project as so:
+```cmake
+add_subdirectory(iracing-sdk-cmake)
+```
+
+When configuring CMake, ensure you give the correct path to the CMake toolchain file when using Linux or MacOS
+```bash
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=iracing-sdk-cmake/toolchain/mingw-w64.cmake -GNinja
+```
 
 # Modifications made to iRacing SDK
 1. Casting in `irsdk/irsdk_utils.cpp:341`. This fixes an ambigious overload, this is picked up as an error in Mingw-W64
