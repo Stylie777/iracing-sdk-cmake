@@ -19,6 +19,12 @@ The Operating System quoted in brackets is the OS that has been tested for this 
 
 ### Configure
 
+* Using Mingw-W64
+```cmake
+cmake -S . -B build -G "MinGW-W64 Makefiles"
+```
+
+**The Speechmarks are required for** `"MinGW-W64 Makefiles"` **to ensure the Windows terminal reads this correctly**
 
 * Using Visual Studio Toolchain
 ```cmake
