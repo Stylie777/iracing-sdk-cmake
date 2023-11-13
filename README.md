@@ -19,6 +19,12 @@ The Operating System quoted in brackets is the OS that has been tested for this 
 
 ### Configure
 
+* Using Mingw-W64
+```cmake
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE="toolchain/mingw-w64-windows.cmake"
+```
+
+**The Speechmarks are required for** `"toolcahin/mingw-w64.cmake"` **to ensure the Windows terminal reads this correctly**
 
 * Using Visual Studio Toolchain
 ```cmake
