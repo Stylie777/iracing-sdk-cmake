@@ -11,20 +11,13 @@ This project is currently based off version 1.15 of the iRacing SDK. As updates 
 # Building the iRacing SDK
 This project is written for use with the [Mingw-W64][mingw-w64-homepage] toolchain which is available for Windows, MacOS (via MacPorts) and Linux systems. I will provide instructions for MacOS and Ubuntu for building this project with Mingw-W64.
 
-Visual Studio's toolchain is supported on Windows, with support for Mingw-W64 coming soon. 
+Visual Studio's toolchain is supported on Windows, allowing development with CMake on Windows systems. Minimal support will be provided for this as this project is designed to provide a Unix development environment for the iRacing SDK. 
 
 The Operating System quoted in brackets is the OS that has been tested for this project, other versions of Linux and MacOS that support Mingw-W64 will work.
 
 ## Windows (Windows 11)
 
 ### Configure
-
-* Using Mingw-W64
-```cmake
-cmake -S . -B build -G "MinGW-W64 Makefiles"
-```
-
-**The Speechmarks are required for** `"MinGW-W64 Makefiles"` **to ensure the Windows terminal reads this correctly**
 
 * Using Visual Studio Toolchain
 ```cmake
