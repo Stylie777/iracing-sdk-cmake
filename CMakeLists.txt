@@ -1,5 +1,5 @@
 # Copyright Jack Styles (stylie777) 2023
-# License: 
+# License: GPL V3
 
 cmake_minimum_required(VERSION 3.27.7 FATAL_ERROR)
 project(iracing-sdk-cmake)

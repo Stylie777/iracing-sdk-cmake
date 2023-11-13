@@ -1,5 +1,5 @@
 # Copyright Jack Styles (stylie777) 2023
-# License: 
+# License: GPL V3
 
 add_library(irsdk-includes INTERFACE)
 

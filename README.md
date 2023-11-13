@@ -1,3 +1,6 @@
+<!-- Copyright Jack Styles (stylie777) 2023
+License: GPL V3 -->
+
 # iRacing SDK CMake
 
 This repository is the home of the iRacing SDK with CMake Support. This enables the iRacing SDK to be built using command line toolchains, rather than Microsoft Visual Studio, also enabling development on Unix based Operating Systems such as MacOS and Linux.

@@ -1,3 +1,6 @@
+# Copyright Jack Styles (stylie777) 2023
+# License: GPL V3
+
 add_executable(irsdk_dumpSetup
     dumpSetup.cpp
 )
