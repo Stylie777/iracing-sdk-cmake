@@ -8,6 +8,8 @@ This README details how you can integrate this implementation into your iRacing 
 
 This project is currently based off version 1.15 of the iRacing SDK. As updates to the SDK are provided, this project will be updated.
 
+****
+
 # Building the iRacing SDK
 This project is written for use with the [Mingw-W64][mingw-w64-homepage] toolchain which is available for Windows, MacOS (via MacPorts) and Linux systems. I will provide instructions for MacOS and Ubuntu for building this project with Mingw-W64.
 
@@ -25,17 +27,21 @@ cmake -S . -B build
 ```
 
 ### Build
+
 ```bash
 cmake --build build
 ```
 
 ## MacOS (MacOS 14 Sonoma)
 
+### Configure
+
 For MacOS, Mingw-W64 is the only option of Toolchain
 
 ```bash
 cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=toolchain/mingw-w64.cmake -GNinja
 ```
+### Build
 
 * `-GNinja` is optional, `make` is also supported as the build system.
 
@@ -45,6 +51,8 @@ cmake --build build/
 
 ## Linux (Ubuntu 22.04 AArch64 LTS)
 
+### Configure
+
 For Linux, Mingw-W64 is the only option of Toolchain
 
 ```bash
@@ -53,15 +61,17 @@ cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=toolchain/mingw-w64.cmake -GNinja
 
 * `-GNinja` is optional, `make` is also supported as the build system.
 
+### Build
+
 ```bash
 cmake --build build/
 ```
 
-****
-
 **Note**
 
 The header file, `windows.h` will need to be included as `#include <windows.h>` when working on Linux  Mingw-W64 cannot recognise when the header file is included as `<Windows.h>`.
+
+****
 
 # Using this project
 
@@ -92,6 +102,8 @@ When configuring CMake, ensure you give the correct path to the CMake toolchain 
 ```bash
 cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=iracing-sdk-cmake/toolchain/mingw-w64.cmake -GNinja
 ```
+
+****
 
 # Modifications made to iRacing SDK
 1. Casting in `irsdk/irsdk_utils.cpp:341`. This fixes an ambigious overload, this is picked up as an error in Mingw-W64
