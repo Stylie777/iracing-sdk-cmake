@@ -20,27 +20,26 @@ The Operating System quoted in brackets is the OS that has been tested for this 
 ### Configure
 
 * Using Visual Studio Toolchain
-```cmake
+```bash
 cmake -S . -B build
 ```
 
 ### Build
-```cmake
+```bash
 cmake --build build
 ```
-The build command is identical for either the Mingw-W64 Toolchain, or Visual Studio Toolchain.
 
 ## MacOS (MacOS 14 Sonoma)
 
 For MacOS, Mingw-W64 is the only option of Toolchain
 
-```cmake
+```bash
 cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=toolchain/mingw-w64.cmake -GNinja
 ```
 
 * `-GNinja` is optional, `make` is also supported as the build system.
 
-```cmake
+```bash
 cmake --build build/
 ```
 
@@ -48,13 +47,13 @@ cmake --build build/
 
 For Linux, Mingw-W64 is the only option of Toolchain
 
-```cmake
+```bash
 cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=toolchain/mingw-w64.cmake -GNinja
 ```
 
 * `-GNinja` is optional, `make` is also supported as the build system.
 
-```cmake
+```bash
 cmake --build build/
 ```
 
