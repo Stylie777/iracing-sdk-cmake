@@ -180,6 +180,14 @@ target_link_libraries(<application-target-name>
 
 ****
 
+# Example's with CMake Support
+
+There are various examples of applications included in the iRacing SDK and below lists the examples that has CMake support in this repository.
+
+* irsdk_dumpSetup
+
+****
+
 # Modifications made to iRacing SDK
 1. Casting in `irsdk/irsdk_utils.cpp:341`. This fixes an ambigious overload, this is picked up as an error in Mingw-W64
 1. All includes of `#include <Windows.h>` have been changed to `#include <windows.h>`. This provides compatibility within Ubuntu 22.04
