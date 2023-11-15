@@ -78,13 +78,15 @@ The header file, `windows.h` will need to be included as `#include <windows.h>` 
 
 # Using this project
 
+## Including the repository in your own
+
 This project can be included using two differnet methods:
 
-## CMake FetchContent
+### CMake FetchContent
 
 **COMING SOON**
 
-## Git Submodule
+### Git Submodule
 
 1. Add the submodule to your repo
 ```git
