@@ -108,6 +108,76 @@ When configuring CMake, ensure you give the correct path to the CMake toolchain 
 cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=iracing-sdk-cmake/toolchain/mingw-w64.cmake -GNinja
 ```
 
+## Using the CMake Libraries
+
+The CMake libraries can be included in your own project using the following CMake options
+
+### Target Link Libraries
+
+`target_link_libraries` enables you to link the library for your application to the relevant iRacing SDK modules. These modules will include the relevant parts of the SDK to support your application development.
+
+Ensure you have included the `irsdk` subdirectory within CMake before including your Application, otherwise CMake will throw an error as it will not know where the libraries are located.
+
+* **Note** `winmm` is required to be included as this tells CMake to target the Windows header files.
+
+#### CMake Libraries Included
+
+##### irsdk-includes
+
+This holds all of the include files for the iRacing SDK. It is included in every source library by default so does not need to be included in your application's CMake target.
+
+##### irsdk-client
+
+This targets the `irsdk_client.cpp` source file. If you require `#include irsdk_client.h` then this CMake library sounds be targeted.
+
+This can be done as so:
+```cmake
+target_link_libraries(<application-target-name>
+    irsdk-client
+    winmm
+)
+```
+* `<target-application-name>` should be replaced with your Applications CMake library name you used when you created the library.
+
+##### irsdk-diskclient
+
+This targets the `irsdk_diskclient.cpp` source file. If you require `#include irsdk_diskclient.h` then this CMake library sounds be targeted.
+
+This can be done as so:
+```cmake
+target_link_libraries(<application-target-name>
+    irsdk-diskclient
+    winmm
+)
+```
+* `<target-application-name>` should be replaced with your Applications CMake library name you used when you created the library.
+
+##### irsdk-utils
+
+This targets the `irsdk_utils.cpp` source file. If you require `#include irsdk_utils.h` then this CMake library sounds be targeted.
+
+This can be done as so:
+```cmake
+target_link_libraries(<application-target-name>
+    irsdk-utils
+    winmm
+)
+```
+* `<target-application-name>` should be replaced with your Applications CMake library name you used when you created the library.
+
+##### irsdk-yaml-parser
+
+This targets the `yaml_parser.cpp` source file. If you require `#include yaml_parser.h` then this CMake library sounds be targeted.
+
+This can be done as so:
+```cmake
+target_link_libraries(<application-target-name>
+    irsdk-yaml-parser
+    winmm
+)
+```
+* `<target-application-name>` should be replaced with your Applications CMake library name you used when you created the library.
+
 ****
 
 # Modifications made to iRacing SDK
